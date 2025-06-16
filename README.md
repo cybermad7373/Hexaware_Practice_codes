@@ -1,6 +1,6 @@
 # Unox Database Management System
 
-A simple SQL database system for managing movie theaters, screenings, bookings, and customers.
+A simple SQL database system.
 
 ## Database Schema ER Diagram
 
