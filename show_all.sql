@@ -1,5 +1,7 @@
 use unox;
 
+SHOW TABLES;
+
 SELECT * FROM Screen;
 SELECT * FROM Movie;
 SELECT * FROM Seat;

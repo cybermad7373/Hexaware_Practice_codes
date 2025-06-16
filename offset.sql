@@ -27,7 +27,7 @@ WHERE show_id = 1 AND is_available = TRUE
 LIMIT 5 OFFSET 5;
 
 -- First 3 action movies
-SELECT * FROM Movie 
+sELECT * FROM Movie 
 WHERE genre = 'Action' 
 LIMIT 3;
 
@@ -38,7 +38,7 @@ SELECT * FROM FoodItem LIMIT 10 OFFSET 0;
 SELECT * FROM FoodItem LIMIT 10 OFFSET 10;
 
 -- Page 3: Next 10 food items
-SELECT * FROM FoodItem LIMIT 10 OFFSET 20;
+Select * FROM FoodItem LIMIT 10 OFFSET 20;
 
 
 /*

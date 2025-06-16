@@ -15,7 +15,7 @@ SELECT review_date, review_date + INTERVAL 1 WEEK AS next_week FROM Review LIMIT
 
 -- DATE COMPARISON
 SELECT title, show_datetime FROM Showw WHERE show_datetime > NOW() LIMIT 3;
-SELECT booking_id, booking_datetime FROM Booking WHERE booking_datetime < '2023-12-31' LIMIT 3;
+Select booking_id, booking_datetime FROM Booking WHERE booking_datetime < '2023-12-31' LIMIT 3;
 SELECT review_id, review_date FROM Review WHERE review_date BETWEEN '2023-01-01' AND '2023-12-31' LIMIT 3;
 
 -- TIME DIFFERENCES
@@ -24,7 +24,7 @@ SELECT booking_id, DATEDIFF(NOW(), booking_datetime) AS days_since_booking FROM 
 SELECT review_id, TIMESTAMPDIFF(DAY, review_date, NOW()) AS days_old FROM Review LIMIT 3;
 
 -- DATE AGGREGATION
-SELECT DATE(show_datetime) AS show_date, COUNT(*) AS shows_per_day FROM Showw GROUP BY show_date LIMIT 3;
+Select DATE(show_datetime) AS show_date, COUNT(*) AS shows_per_day FROM Showw GROUP BY show_date LIMIT 3;
 SELECT MONTH(booking_datetime) AS month, SUM(total_cost) AS monthly_revenue FROM Booking GROUP BY month LIMIT 3;
 SELECT HOUR(show_datetime) AS hour_of_day, COUNT(*) AS shows_count FROM Showw GROUP BY hour_of_day LIMIT 3;
 
@@ -39,6 +39,6 @@ SELECT booking_datetime, CONVERT_TZ(booking_datetime, @@session.time_zone, 'UTC'
 SELECT review_date, CONVERT_TZ(review_date, 'SYSTEM', 'America/New_York') AS ny_time FROM Review LIMIT 3;
 
 -- DATE VALIDATION
-SELECT show_datetime, ISDATE(show_datetime) AS is_valid_date FROM Showw LIMIT 3;
+Select show_datetime, ISDATE(show_datetime) AS is_valid_date FROM Showw LIMIT 3;
 SELECT booking_datetime, DAYNAME(booking_datetime) AS day_name FROM Booking WHERE DAYOFWEEK(booking_datetime) = 1 LIMIT 3;
 SELECT review_date, CASE WHEN review_date > NOW() THEN 'Future' ELSE 'Past' END AS time_status FROM Review LIMIT 3;

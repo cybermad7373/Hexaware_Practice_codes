@@ -2,15 +2,15 @@
 CREATE DATABASE IF NOT EXISTS unox;
 USE unox;
 
--- Create Screen table
+-- create Screen table
 CREATE TABLE Screen (
     screen_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     class_type VARCHAR(10) NOT NULL,
     capacity INT NOT NULL
-);
+); 
 
--- Create Movie table
+-- Create move table
 CREATE TABLE Movie (
     movie_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE Seat (
     FOREIGN KEY (screen_id) REFERENCES Screen(screen_id)
 );
 
--- Create MovieCast table
+-- Create movie caset table
 CREATE TABLE MovieCast (
     cast_id INT AUTO_INCREMENT PRIMARY KEY,
     movie_id INT NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE MovieCast (
     FOREIGN KEY (movie_id) REFERENCES Movie(movie_id)
 );
 
--- Create Review table
+-- Create reviwe table
 CREATE TABLE Review (
     review_id INT AUTO_INCREMENT PRIMARY KEY,
     movie_id INT NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE Review (
     FOREIGN KEY (movie_id) REFERENCES Movie(movie_id)
 );
 
--- Create Show table
+-- Create show table
 CREATE TABLE Showw (
     show_id INT AUTO_INCREMENT PRIMARY KEY,
     screen_id INT NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE Showw (
     FOREIGN KEY (movie_id) REFERENCES Movie(movie_id)
 );
 
--- Create User table
+-- Create user table
 CREATE TABLE User (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE User (
     phone VARCHAR(15)
 );
 
--- Create Membership table
+-- Create membershipo table
 CREATE TABLE Membership (
     membership_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -83,7 +83,7 @@ CREATE TABLE ShowSeat (
     FOREIGN KEY (seat_id) REFERENCES Seat(seat_id)
 );
 
--- Create Booking table
+-- Create bookingg table
 CREATE TABLE Booking (
     booking_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -184,3 +184,25 @@ CREATE TABLE PointsTransaction (
     transaction_type VARCHAR(20) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES User(user_id)
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

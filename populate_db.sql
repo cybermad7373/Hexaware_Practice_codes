@@ -1,6 +1,6 @@
 USE unox;
 
--- Insert screens 
+-- insert screens 
 INSERT INTO Screen (name, class_type, capacity) VALUES
 ('Elite', 'Gold', 150),
 ('Premier', 'Silver', 200),
@@ -17,7 +17,7 @@ INSERT INTO Movie (title, genre, rating, status, poster_image_url) VALUES
 ('Veyil', 'Drama', 8.3, 'Now Showing', 'https://example.com/veyil.jpg'),
 ('Subramaniapuram', 'Gangster', 8.5, 'Now Showing', 'https://example.com/subramaniapuram.jpg');
 
--- Insert seats for each screen 
+-- insert seats for each scr 
 -- Screen 1
 INSERT INTO Seat (screen_id, seat_number) VALUES
 (1, 'A1'), (1, 'A2'), (1, 'A3'), (1, 'A4'), (1, 'A5'),
@@ -38,7 +38,7 @@ INSERT INTO Seat (screen_id, seat_number) VALUES
 (4, 'A1'), (4, 'A2'), (4, 'A3'), (4, 'A4'), (4, 'A5'),
 (4, 'B1'), (4, 'B2'), (4, 'B3'), (4, 'B4'), (4, 'B5');
 
--- Insert movie casts
+-- Insert movie caast
 INSERT INTO MovieCast (movie_id, person_name, role) VALUES
 (1, 'Suriya', 'Sanjay Ramaswamy'),
 (1, 'Asin', 'Kalpana'),
@@ -72,7 +72,7 @@ INSERT INTO Showw (screen_id, movie_id, show_datetime) VALUES
 (2, 6, '2023-04-02 13:30:00'),
 (3, 7, '2023-04-02 16:00:00');
 
--- Insert users
+-- isert users
 INSERT INTO User (name, email, phone) VALUES
 ('Rajesh', 'rajesh@example.com', '9876543210'),
 ('Meena', 'meena@example.com', '8765432109'),
@@ -100,7 +100,7 @@ INSERT INTO Booking (user_id, show_id, booking_datetime, total_cost) VALUES
 (3, 5, '2023-03-29 20:45:00', 900.00),
 (5, 2, '2023-03-30 18:20:00', 300.00);
 
--- Insert payment gateways
+-- Insert paynent gateways
 INSERT INTO PaymentGateway (name) VALUES
 ('Banking'), ('Credit Card'), ('Paytm'), ('UPI');
 
@@ -130,7 +130,7 @@ INSERT INTO FoodItem (name, description, is_combo) VALUES
 ('Noodles', 'Chinese noodles', FALSE),
 ('Cinema Combo', 'Popcorn, soda and chocolate', TRUE);
 
--- Insert food item sizes
+-- insert food item sizes
 INSERT INTO FoodItemSize (item_id, size_name, rate) VALUES
 (1, 'Small', 80.00),
 (1, 'Large', 120.00),
@@ -142,12 +142,12 @@ INSERT INTO FoodItemSize (item_id, size_name, rate) VALUES
 (5, 'Single', 200.00);
 
 -- Insert food orders
-INSERT INTO FoodOrder (booking_id, screen_id, seat_id, order_datetime, total_cost, delivery_method) VALUES
+inSERT INTO FoodOrder (booking_id, screen_id, seat_id, order_datetime, total_cost, delivery_method) VALUES
 (1, 1, 1, '2023-04-01 09:30:00', 340.00, 'QR'),
 (2, 2, 11, '2023-04-01 11:00:00', 200.00, 'Manual'),
 (3, 4, 21, '2023-04-01 19:45:00', 160.00, 'QR');
 
--- Insert food order items
+-- insert food order items
 INSERT INTO FoodOrderItem (order_id, item_id, size_id, quantity, price_at_time) VALUES
 (1, 5, 8, 1, 200.00),
 (1, 2, 4, 2, 140.00),
@@ -163,3 +163,24 @@ INSERT INTO PointsTransaction (user_id, amount, points_earned, transaction_datet
 (5, 300.00, 30, '2023-03-30 18:21:00', 'Booking'),
 (1, 340.00, 34, '2023-04-01 09:30:00', 'Food'),
 (2, 200.00, 20, '2023-04-01 11:00:00', 'Food');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

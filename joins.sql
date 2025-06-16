@@ -34,7 +34,7 @@ GROUP BY m.title
 LIMIT 3;
 
 -- LEFT JOIN with WHERE condition
-SELECT u.name, b.booking_datetime, b.total_cost
+select u.name, b.booking_datetime, b.total_cost
 FROM User u
 LEFT JOIN Booking b 
 ON u.user_id = b.user_id
@@ -66,7 +66,7 @@ LIMIT 3;
 SELECT * FROM Movie m LEFT JOIN Review r 
 ON m.movie_id = r.movie_id
 UNION
-SELECT * FROM Movie m RIGHT JOIN Review r 
+Select * FROM Movie m RIGHT JOIN Review r 
 ON m.movie_id = r.movie_id WHERE m.movie_id IS NULL
 LIMIT 3;
 
@@ -75,7 +75,7 @@ SELECT m.title, r.review_date, r.reviewer_name
 FROM Movie m LEFT JOIN Review r 
 ON m.movie_id = r.movie_id
 UNION
-SELECT m.title, r.review_date, r.reviewer_name
+Select m.title, r.review_date, r.reviewer_name
 FROM Movie m RIGHT JOIN Review r 
 ON m.movie_id = r.movie_id WHERE m.movie_id IS NULL
 LIMIT 3;
@@ -85,7 +85,7 @@ SELECT u.name, b.booking_datetime, b.total_cost
 FROM User u LEFT JOIN Booking b 
 ON u.user_id = b.user_id
 UNION
-SELECT u.name, b.booking_datetime, b.total_cost
+Select u.name, b.booking_datetime, b.total_cost
 FROM User u RIGHT JOIN Booking b 
 ON u.user_id = b.user_id WHERE u.user_id IS NULL
 LIMIT 3;
@@ -94,14 +94,14 @@ LIMIT 3;
 SELECT * FROM Movie CROSS JOIN Screen LIMIT 3;
 
 -- CROSS JOIN with specific columns
-SELECT m.title, s.name, s.class_type
+select m.title, s.name, s.class_type
 FROM Movie m
 CROSS JOIN Screen s
 WHERE m.genre = 'Action'
 LIMIT 3;
 
 -- CROSS JOIN with calculation
-SELECT m.title, s.name, (m.rating * 10) AS rating_percent, s.capacity
+Select m.title, s.name, (m.rating * 10) AS rating_percent, s.capacity
 FROM Movie m
 CROSS JOIN Screen s
 ORDER BY m.rating DESC
@@ -119,7 +119,7 @@ ON u1.user_id < u2.user_id
 LIMIT 3;
 
 -- SELF JOIN with filtering
-SELECT u1.name AS high_spender, u2.name AS other_user
+Select u1.name AS high_spender, u2.name AS other_user
 FROM User u1
 JOIN User u2 
 ON u1.user_id <> u2.user_id

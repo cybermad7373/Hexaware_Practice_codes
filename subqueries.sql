@@ -20,7 +20,7 @@ SELECT name FROM User
 WHERE user_id IN (SELECT user_id FROM Booking WHERE total_cost > 300) 
 LIMIT 3;
 
-SELECT seat_number FROM Seat 
+select seat_number FROM Seat 
 WHERE screen_id IN (SELECT screen_id FROM Screen WHERE class_type = 'Gold') 
 LIMIT 3;
 
@@ -42,7 +42,7 @@ SELECT avg_rating FROM
 (SELECT genre, AVG(rating) AS avg_rating FROM Movie GROUP BY genre) AS genre_stats 
 LIMIT 3;
 
-SELECT booking_count FROM 
+sELECT booking_count FROM 
 (SELECT user_id, COUNT(*) AS booking_count FROM Booking GROUP BY user_id) AS user_bookings 
 LIMIT 3;
 
@@ -51,8 +51,8 @@ SELECT show_count FROM
 LIMIT 3;
 
 -- Derived table with calculation
-SELECT genre, avg_rating FROM 
-(SELECT genre, AVG(rating) AS avg_rating FROM Movie GROUP BY genre) AS genre_stats 
+select genre, avg_rating FROM 
+(sELECT genre, AVG(rating) AS avg_rating FROM Movie GROUP BY genre) AS genre_stats 
 WHERE avg_rating > 7.5 
 LIMIT 3;
 
@@ -62,7 +62,7 @@ WHERE total_spent > 500
 LIMIT 3;
 
 SELECT screen_id, avg_capacity FROM 
-(SELECT screen_id, AVG(capacity) AS avg_capacity FROM Screen GROUP BY screen_id) AS screen_capacity 
+(sELECT screen_id, AVG(capacity) AS avg_capacity FROM Screen GROUP BY screen_id) AS screen_capacity 
 WHERE avg_capacity > 180 
 LIMIT 3;
 
@@ -71,7 +71,7 @@ SELECT title, (SELECT COUNT(*) FROM Review r WHERE r.movie_id = m.movie_id) AS r
 FROM Movie m 
 LIMIT 3;
 
-SELECT name, (SELECT COUNT(*) FROM Booking b WHERE b.user_id = u.user_id) AS booking_count 
+select name, (SELECT COUNT(*) FROM Booking b WHERE b.user_id = u.user_id) AS booking_count 
 FROM User u 
 LIMIT 3;
 
@@ -86,7 +86,7 @@ FROM Movie m
 LIMIT 3;
 
 SELECT s.name, 
-       (SELECT MAX(total_cost) FROM Booking b JOIN Showw sh ON b.show_id = sh.show_id 
+       (select MAX(total_cost) FROM Booking b JOIN Showw sh ON b.show_id = sh.show_id 
         WHERE sh.screen_id = s.screen_id) AS max_booking 
 FROM Screen s 
 LIMIT 3;
@@ -122,12 +122,12 @@ FROM Movie
 WHERE rating > ALL (SELECT rating FROM Movie WHERE genre = 'Horror') 
 LIMIT 3;
 
-SELECT name, capacity 
+Select name, capacity 
 FROM Screen 
 WHERE capacity > ALL (SELECT capacity FROM Screen WHERE class_type = 'Silver') 
 LIMIT 3;
 
-SELECT booking_id, total_cost 
+sELECT booking_id, total_cost 
 FROM Booking 
 WHERE total_cost > ALL (SELECT total_cost FROM Booking WHERE user_id = 2) 
 LIMIT 3;
@@ -143,7 +143,7 @@ FROM Screen
 WHERE capacity < ANY (SELECT capacity FROM Screen WHERE class_type = 'Gold') 
 LIMIT 3;
 
-SELECT booking_id, total_cost 
+Select booking_id, total_cost 
 FROM Booking 
 WHERE total_cost < SOME (SELECT total_cost FROM Booking WHERE user_id = 1) 
 LIMIT 3;

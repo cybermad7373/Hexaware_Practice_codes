@@ -74,8 +74,8 @@ SELECT b.total_cost, u.name FROM Booking b RIGHT JOIN User u ON b.user_id = u.us
 SELECT sh.show_datetime, sc.name FROM Showw sh RIGHT JOIN Screen sc ON sh.screen_id = sc.screen_id LIMIT 3;
 
 -- WHERE with subquery
-SELECT title FROM Movie WHERE movie_id IN (SELECT movie_id FROM Review) LIMIT 3;
-SELECT name FROM User WHERE user_id IN (SELECT user_id FROM Booking WHERE total_cost > 300) LIMIT 3;
+sELECT title FROM Movie WHERE movie_id IN (SELECT movie_id FROM Review) LIMIT 3;
+Select name FROM User WHERE user_id IN (SELECT user_id FROM Booking WHERE total_cost > 300) LIMIT 3;
 SELECT name FROM Screen WHERE screen_id IN (SELECT screen_id FROM Showw WHERE movie_id = 1) LIMIT 3;
 
 -- FROM with subquery
@@ -84,21 +84,36 @@ SELECT booking_count FROM (SELECT user_id, COUNT(*) AS booking_count FROM Bookin
 SELECT large_screens FROM (SELECT class_type, COUNT(*) AS large_screens FROM Screen WHERE capacity > 180 GROUP BY class_type) AS screen_counts LIMIT 3;
 
 -- SELECT with subquery
-SELECT title, (SELECT COUNT(*) FROM Review r WHERE r.movie_id = m.movie_id) AS review_count FROM Movie m LIMIT 3;
+Select title, (SELECT COUNT(*) FROM Review r WHERE r.movie_id = m.movie_id) AS review_count FROM Movie m LIMIT 3;
 SELECT name, (SELECT COUNT(*) FROM Booking b WHERE b.user_id = u.user_id) AS booking_count FROM User u LIMIT 3;
 SELECT name, (SELECT COUNT(*) FROM Showw s WHERE s.screen_id = sc.screen_id) AS show_count FROM Screen sc LIMIT 3;
 
 -- UNION
-SELECT name FROM User WHERE name LIKE 'K%' UNION SELECT person_name FROM MovieCast LIMIT 3;
+Select name FROM User WHERE name LIKE 'K%' UNION SELECT person_name FROM MovieCast LIMIT 3;
 SELECT title FROM Movie WHERE rating > 8.0 UNION SELECT name FROM Screen WHERE class_type = 'Gold' LIMIT 3;
 SELECT seat_number FROM Seat WHERE screen_id = 1 UNION SELECT seat_number FROM Seat WHERE screen_id = 2 LIMIT 3;
 
 -- INTERSECT (simulated with IN)
 SELECT title FROM Movie WHERE movie_id IN (SELECT movie_id FROM Review) LIMIT 3;
-SELECT name FROM User WHERE user_id IN (SELECT user_id FROM Booking) LIMIT 3;
+sELECT name FROM User WHERE user_id IN (SELECT user_id FROM Booking) LIMIT 3;
 SELECT name FROM Screen WHERE screen_id IN (SELECT screen_id FROM Showw) LIMIT 3;
 
 -- EXCEPT (simulated with NOT IN)
 SELECT title FROM Movie WHERE movie_id NOT IN (SELECT movie_id FROM Review) LIMIT 3;
-SELECT name FROM User WHERE user_id NOT IN (SELECT user_id FROM Booking) LIMIT 3;
+Select name FROM User WHERE user_id NOT IN (SELECT user_id FROM Booking) LIMIT 3;
 SELECT name FROM Screen WHERE screen_id NOT IN (SELECT screen_id FROM Showw) LIMIT 3;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
