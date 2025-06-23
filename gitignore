@@ -1,0 +1,4 @@
+.venv
+PyTest/__pucache__
+.pyc
+.pytest_cache
