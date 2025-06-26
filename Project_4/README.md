@@ -1,64 +1,63 @@
-project_portfolio/
-├── expense_tracker/
-│   ├── __init__.py
-│   ├── expense_tracker.py
-│   ├── expense_db.py
-│   ├── lld.md
-│   └── test_expense.py
-├── student_report/
-│   ├── __init__.py
-│   ├── report_card.py
-│   ├── student_db.py
-│   ├── lld.md
-│   └── test_report.py
-├── quiz_app/
-│   ├── __init__.py
-│   ├── quiz.py
-│   ├── quiz_db.py
-│   ├── lld.md
-│   └── test_quiz.py
-├── bill_splitter/
-│   ├── __init__.py
-│   ├── splitter.py
-│   ├── splitter_db.py
-│   ├── lld.md
-│   └── test_splitter.py
-├── database/
-│   ├── __init__.py
-│   ├── db_connection.py
-│   └── schema.sql
-├── requirements.txt
-└── README.md
+# Multi-Tool Application Suite
 
-Implementation Notes
+![Project Banner](https://via.placeholder.com/800x200?text=Python+Multi-Tool+Application+Suite)
 
-Each project has its own module with:
-Main functionality class
-Database handler class
-LLD documentation
-Test file
-Database connectivity is centralized in the database folder with:
-Connection singleton class
-Schema creation script
-Environment variables for configuration
+A collection of four practical Python applications designed to handle common daily tasks:
 
-Key features implemented:
-Expense tracking with monthly/yearly summaries
-Student report card generation with grade calculation
-Quiz application with score tracking
-Bill splitting with item-level sharing
+1. **Expense Tracker** - Manage personal finances
+2. **Student Report Card System** - Track academic performance
+3. **Quiz Application** - Test knowledge with interactive quizzes
+4. **Bill Splitter** - Easily divide expenses among friends
 
-Python concepts used across projects:
-Object-oriented programming
-Lambda functions
-List/dictionary comprehensions
-Type hints
-Datetime operations
-Math calculations
+## Features Overview
 
-To set up the project:
-Create a MySQL database
-Set up environment variables in a .env file
-Run schema.sql to create tables
-Install requirements with pip install -r requirements.txt
-Run individual project files or create a main.py to integrate all projects
+### 1. Expense Tracker
+- 📅 Monthly and yearly expense summaries
+- 🏷️ Category-wise spending analysis
+- 📊 Visual expense history tracking
+- 📈 Monthly comparison reports
+
+### 2. Student Report Card System
+- 📝 Student performance tracking
+- 🅰️ Automatic grade calculation
+- 🏆 Identify top performers
+- 📊 Percentage-based ranking system
+
+### 3. Quiz Application
+- ❓ Multiple question types
+- 📝 Randomized question order
+- 🏅 Score tracking and performance analysis
+- 📚 Expandable question database
+
+### 4. Bill Splitter
+- 💰 Equal division of bills
+- ⚖️ Weight-based splitting
+- 🧮 Percentage-based allocation
+- 💸 Tip calculation included
+
+## Installation
+
+ **Clone the repository**:
+   ```bash
+   git clone https://github.com/cybermad7373/project_4.git
+   cd project_4
+   ```
+
+**Set up virtual environment**:
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+.venv\Scripts\activate     # Windows
+
+**Install dependencies**:
+pip install -r requirements.txt
+
+**Run the main application**:
+```python main.py```
+
+==================================================
+1. Expense Tracker
+2. Student Report Card System
+3. Quiz Application
+4. Bill Splitter
+5. Exit
+==================================================
