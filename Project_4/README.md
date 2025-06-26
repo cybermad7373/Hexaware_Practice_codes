@@ -1,6 +1,6 @@
-# Multi-Tool Application Suite
 
-![Out puts here](https://via.placeholder.com/800x200?text=Python+Multi-Tool+Application+Suite)
+# Check for the application [outputs here](https://github.com/cybermad7373/Hexaware_Practice_codes/wiki/Sample-Execution-of-the-Project)
+# Test Result [here](https://github.com/cybermad7373/Hexaware_Practice_codes/wiki/Test-Result)
 
 A collection of four practical Python applications designed to handle common daily tasks:
 
