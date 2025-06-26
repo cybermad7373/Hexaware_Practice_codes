@@ -12,28 +12,28 @@ A collection of four practical Python applications designed to handle common dai
 ## Features Overview
 
 ### 1. Expense Tracker
-- 📅 Monthly and yearly expense summaries
-- 🏷️ Category-wise spending analysis
-- 📊 Visual expense history tracking
-- 📈 Monthly comparison reports
+-  Monthly and yearly expense summaries
+-  Category-wise spending analysis
+-  Visual expense history tracking
+-  Monthly comparison reports
 
 ### 2. Student Report Card System
-- 📝 Student performance tracking
-- 🅰️ Automatic grade calculation
-- 🏆 Identify top performers
-- 📊 Percentage-based ranking system
+-  Student performance tracking
+-  Automatic grade calculation
+-  Identify top performers
+-  Percentage-based ranking system
 
 ### 3. Quiz Application
-- ❓ Multiple question types
-- 📝 Randomized question order
-- 🏅 Score tracking and performance analysis
-- 📚 Expandable question database
+-  Multiple question types
+-  Randomized question order
+-  Score tracking and performance analysis
+-  Expandable question database
 
 ### 4. Bill Splitter
-- 💰 Equal division of bills
-- ⚖️ Weight-based splitting
-- 🧮 Percentage-based allocation
-- 💸 Tip calculation included
+-  Equal division of bills
+-  Weight-based splitting
+-  Percentage-based allocation
+-  Tip calculation included
 
 ## Installation
 
@@ -52,7 +52,9 @@ source .venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 
 **Run the main application**:
-```python main.py```
+``` bash 
+python main.py
+```
 
 ==================================================
 1. Expense Tracker
