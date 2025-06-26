@@ -1,4 +1,6 @@
 .venv
-PyTest/__pucache__
+PyTest/__pycache__
 .pyc
 .pytest_cache
+.ipynb_checkpoints
+.env
