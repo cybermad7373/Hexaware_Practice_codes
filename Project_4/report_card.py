@@ -8,9 +8,8 @@ class ReportCardSystem:
             (90, 'A'), (80, 'B'), (70, 'C'), (60, 'D'), (0, 'F')
         ]
 
-    def add_student(self):
-        name = input("Enter student name: ")
-        marks = list(map(float, input("Enter marks separated by space: ").split()))
+    def add_student(self, name, marks):
+        """Add student with name and marks list"""
         self.students[name] = {
             'marks': marks,
             'date_added': datetime.date.today()
@@ -44,7 +43,7 @@ class ReportCardSystem:
         if not self.students:
             return None
         return max(self.students.items(), 
-                  key=lambda x: self.calculate_percentage(x[1]['marks']))
+                    key=lambda x: self.calculate_percentage(x[1]['marks']))
 
     def run(self):
         while True:
@@ -52,7 +51,7 @@ class ReportCardSystem:
             print("STUDENT REPORT CARD SYSTEM".center(50))
             print("="*50)
             print("1. Add Student")
-            print("2. View Student Report")
+            print("2. View Student Report") 
             print("3. View Highest Scorer")
             print("4. Back to Main Menu")
             print("="*50)
@@ -60,7 +59,9 @@ class ReportCardSystem:
             choice = input("Enter your choice (1-4): ")
             
             if choice == '1':
-                self.add_student()
+                name = input("Enter student name: ")
+                marks = list(map(float, input("Enter marks separated by space: ").split()))
+                self.add_student(name, marks)
             elif choice == '2':
                 name = input("Enter student name: ")
                 report = self.generate_report(name)

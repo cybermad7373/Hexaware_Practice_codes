@@ -21,14 +21,13 @@ class QuizApp:
             print(f"Wrong! The correct answer is {answer}")
 
     def run_quiz(self):
-        self.score = 0
+        self.score = 0  # Explicitly reset score
         items = list(self.questions.items())
         random.shuffle(items)
         
         print("\n" + "="*50)
         ascii_text = pyfiglet.figlet_format("QUIZ APPLICATION")
         print(ascii_text.center(50))
-        # print("QUIZ APPLICATION".center(50))
         print("="*50)
         print(f"Total Questions: {len(self.questions)}")
         print("Answer the following questions:\n")
