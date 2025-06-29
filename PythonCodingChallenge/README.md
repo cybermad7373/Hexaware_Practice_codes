@@ -30,32 +30,10 @@ cd loan-management-system
 2. **Create and activate a virtual environment**:
 
 python -m venv .venv
-.\.venv\Scripts\activate  # Windows
+.\.venv\Scripts\activate            # Windows
 
 3. **Install the required packages**:
 ```pip install -r requirements.txt```
-
-loan-management-system/
-
-├── database/           # Database scripts and configuration
-
-├── entity/             # Domain model classes
-
-├── dao/                # Data access objects
-
-├── exception/          # Custom exceptions
-
-├── util/               # Utility classes
-
-├── main/               # Main application module
-
-├── tests/              # Test cases
-
-├── .gitignore
-
-├── requirements.txt
-
-└── README.md
 
 4. **Running the Application**:
 ```bash
@@ -68,61 +46,43 @@ pytest -v
 
 ***
 
-Usage Examples
-Applying for a Home Loan
+Usage Examples:
+
+Applying for a Home Loan:
 Select "Apply for a Loan" from the main menu
-
 Choose "Home Loan"
-
 Enter customer details and loan information
-
 Confirm the application
 
-Checking Loan Status
+Checking Loan Status:
 Select "Check Loan Status" from the main menu
-
 Enter the Loan ID
-
 View approval status based on credit score
 
-Making a Payment
+Making a Payment:
 Select "Make Loan Repayment"
-
 Enter Loan ID and payment amount
-
 System calculates how many EMIs can be paid
 
-Configuration
 Key configuration files:
-
 database/db.properties - Database connection settings
-
 util/db_conn_util.py - Connection management
 
 Troubleshooting
 Common Issues
 Database Connection Errors:
-
 Verify MySQL service is running
-
 Check credentials in db.properties
-
 Ensure database and tables exist
 
 Import Errors:
-
 Make sure all __init__.py files exist
-
 Run from project root directory
-
 Try pip install -e . to install in development mode
 
 Test Failures:
-
 Ensure test database is properly set up
-
 Check for any pending migrations
-
 Contributing
 Fork the repository
 
