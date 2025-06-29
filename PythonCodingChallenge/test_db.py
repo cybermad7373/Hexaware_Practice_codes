@@ -5,18 +5,15 @@ def test_connection():
     try:
         print("Testing database connection...")
         
-        # Get connection string from properties file
         connection_string = DBPropertyUtil.get_connection_string("db.properties")
         print(f"Connection string: {connection_string}")
         
-        # Establish connection
+        # connection
         conn = DBConnUtil.get_connection(connection_string)
         
         if conn.is_connected():
             print("Connection successful!")
             print(f"MySQL server version: {conn.get_server_info()}")
-            
-            # Test a simple query
             cursor = conn.cursor()
             cursor.execute("SELECT DATABASE()")
             db_name = cursor.fetchone()[0]

@@ -8,7 +8,7 @@ class Customer:
         self.__address = address
         self.__credit_score = credit_score
 
-    # Getters
+    # Get
     def get_customer_id(self):
         return self.__customer_id
     
@@ -27,7 +27,7 @@ class Customer:
     def get_credit_score(self):
         return self.__credit_score
     
-    # Setters
+    # Sett
     def set_customer_id(self, customer_id):
         self.__customer_id = customer_id
     

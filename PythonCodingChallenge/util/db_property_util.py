@@ -11,7 +11,7 @@ class DBPropertyUtil:
             current_dir = os.path.dirname(os.path.abspath(__file__))
             property_file_path = os.path.join(current_dir, "..", "database", property_file_name)
             
-            print(f"Looking for property file at: {property_file_path}")  # Debug print
+            print(f"Looking for property file at: {property_file_path}")  # Debug print  --------------- remove later !
             
             if not os.path.exists(property_file_path):
                 raise FileNotFoundError(f"Property file not found at: {property_file_path}")

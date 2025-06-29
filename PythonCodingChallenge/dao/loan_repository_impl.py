@@ -136,7 +136,7 @@ class LoanRepositoryImpl(ILoanRepository):
             print(f"Error updating loan status: {err}")
             raise
     
-    def calculate_emi(self, loan_id):
+    def calculate_emi(self, loan_id):    ## need to chek this later +++++++++++++++++++++++++++++++++++++++++++++++++++++
         try:
             cursor = self.connection.cursor(dictionary=True)
             

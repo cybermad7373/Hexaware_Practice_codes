@@ -9,14 +9,12 @@ class CarLoan(Loan):
         self.__car_model = car_model
         self.__car_value = car_value
 
-    # Getters
     def get_car_model(self):
         return self.__car_model
     
     def get_car_value(self):
         return self.__car_value
     
-    # Setters
     def set_car_model(self, car_model):
         self.__car_model = car_model
     

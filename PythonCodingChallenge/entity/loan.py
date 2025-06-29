@@ -11,7 +11,7 @@ class Loan:
         self.__loan_type = loan_type
         self.__loan_status = loan_status
 
-    # Getters
+    # Gett
     def get_loan_id(self):
         return self.__loan_id
     
@@ -33,7 +33,7 @@ class Loan:
     def get_loan_status(self):
         return self.__loan_status
     
-    # Setters
+    # Sett
     def set_loan_id(self, loan_id):
         self.__loan_id = loan_id
     

@@ -9,14 +9,14 @@ class HomeLoan(Loan):
         self.__property_address = property_address
         self.__property_value = property_value
 
-    # Getters
+    # Gett
     def get_property_address(self):
         return self.__property_address
     
     def get_property_value(self):
         return self.__property_value
     
-    # Setters
+    # Set
     def set_property_address(self, property_address):
         self.__property_address = property_address
     

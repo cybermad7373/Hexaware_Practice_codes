@@ -2,7 +2,7 @@ import sys
 import os
 import pytest
 
-# Add the project root to Python path
+# Add the project root to Python path   // need to chek what is this later ! 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from util.db_conn_util import DBConnUtil
@@ -53,7 +53,7 @@ def test_loan_repository_initialization(loan_repo):
 @pytest.mark.xfail
 def test_calculate_interest(loan_repo):
     """Test interest calculation"""
-    # First create a test loan
+    #  create a test loan
     test_customer = Customer(customer_id=1)
     test_loan = HomeLoan(
         customer=test_customer,
@@ -82,7 +82,7 @@ def test_calculate_interest(loan_repo):
             loan_repo.calculate_interest(99999)
             
     finally:
-        # Clean up
+        # Clean up after test
         cursor = loan_repo.connection.cursor()
         cursor.execute(f"DELETE FROM Loan WHERE loan_id = {loan_id}")
         loan_repo.connection.commit()
@@ -109,7 +109,7 @@ def test_loan_status_update(loan_repo):
     cursor.close()
     
     try:
-        # Test status update (should approve since credit score > 650)
+        # Test status update (should approve since credit score > 650) else not 
         status = loan_repo.loan_status(loan_id)
         assert status == "Approved"
         
@@ -128,7 +128,7 @@ def test_loan_status_update(loan_repo):
         loan_repo.connection.commit()
         cursor.close()
 
-@pytest.mark.xfail
+@pytest.mark.xfail  ## need to chek this later +++++++++++++++++++++++++++++++++++++++++++++++++++++ marking as xfail
 def test_emi_calculation(loan_repo):
     """Test EMI calculation"""
     # First create a test loan

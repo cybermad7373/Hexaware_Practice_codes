@@ -150,7 +150,7 @@ class MainModule:
         except Exception as e:
             print(f"Error checking loan status: {e}")
     
-    def calculate_emi(self):
+    def calculate_emi(self):      ## need to chek this later +++++++++++++++++++++++++++++++++++++++++++++++++++++ on dao implementaion file 
         print("\nCalculate EMI for a Loan")
         try:
             loan_id = int(input("Enter Loan ID: "))
