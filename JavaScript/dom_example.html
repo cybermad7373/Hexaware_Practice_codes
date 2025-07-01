@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indian Employee Data</title>
+    <script src="array_operations.js"></script>
+    <script>
+        function showPrimeNumbers() {
+            let output = "";
+            for (let num = 2; num <= 20; num++) {
+                if (isPrime(num)) {
+                    output += num + " ";
+                }
+            }
+            document.getElementById("primeOutput").innerText = output;
+        }
+
+        function calculate() {
+            const number = parseInt(document.getElementById("number").value);
+            const result = factorial(number);
+            document.getElementById("result").innerText = 
+                `Factorial of ${number} is ${result}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Indian Employee Data Operations</h1>
+    
+    <div>
+        <h2>Prime Numbers between 2-20</h2>
+        <button onclick="showPrimeNumbers()">Show Primes</button>
+        <p id="primeOutput"></p>
+    </div>
+
+    <div>
+        <h2>Calculate Factorial</h2>
+        <input type="number" id="number" placeholder="Enter a number">
+        <button onclick="calculate()">Calculate</button>
+        <p id="result"></p>
+    </div>
+
+    <div>
+        <h2>Employee List</h2>
+        <ul id="employeeList"></ul>
+    </div>
+
+    <script>
+        // Display employee names
+        const ul = document.getElementById("employeeList");
+        indianNames.forEach(name => {
+            const li = document.createElement("li");
+            li.textContent = name;
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>
